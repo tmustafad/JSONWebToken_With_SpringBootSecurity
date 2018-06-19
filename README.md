@@ -15,7 +15,7 @@ In Pom.xml you can find all required dependencies , once you install the project
 ## The Endpoints to reach after running the project
 **http://localhost:8080/index** This is a **GET** endpoint ,you need to include the token to the header of the request in order to successfully get the result.
 
-**header values==>** **Key=Authorisation  Value= Check <THE GENERATED TOKEN>  **
+**header values==>** **Key=Authorisation**  **Value=Check <THE GENERATED TOKEN>**
 
 **http://localhost:8080/token** This is a **POST** request for getting the token
 
