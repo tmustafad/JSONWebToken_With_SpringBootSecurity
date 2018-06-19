@@ -5,16 +5,7 @@ How to use JSON Web Tokens along with Spring Boot.
 
 ## The Goal
 
-The goal of this project is to understand the capabilities of Apache Camel on how it can perform as a **smart endpoint**. For achieving this smartness a routing mechanism is built under **route** package where you can find a abstract router class extending **RouteBuilder** and two different routers extending this abstract class . You can think of these two extending classes as single ,independent microservices.Once the router directs messages to relevant ActiveMQ queues, the service who is subscribed to these topics , get and  use the messages.
-
-Another intention of this project is exposing **rest endpoints** with Camel RestDSL and direct these requests  to related queues in ActiveMQ  by using  **RouteBuilder** .
-
-For connecting ActiveMQ ,the **AMQP** protocol is used via **Apache Qpid** libary. You can find how the properties set to connect to ActiveMQ in config package together with **application.properties** file.
-
-### Prerequisites
-
-Because the incoming requests are being directed to ActiveMQ, you need to have activemq installed on your environment.
-
+Generating JWT tokens and how to use it for authenticating a user for accessing rest endpoints. Because this projet is for demonstration purposes , I will not use an authentication server, a rest endpoint will be used to generate token instead.
 
 
 ### Installing
@@ -23,7 +14,9 @@ In Pom.xml you can find all required dependencies , once you install the project
 
 ## The Endpoints to reach after running the project
 **http://localhost:8080/index** This is a **GET** endpoint ,you need to include the token to the header of the request in order to successfully get the result.
+
 **header values==>** **Key=Authorisation  Value= Check <THE GENERATED TOKEN>  **
+
 **http://localhost:8080/token** This is a **POST** request for getting the token
 
 
